@@ -68,16 +68,16 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>C:\Projects\C++\roguelikedev\LIBTCOD\include;C:\Projects\C++\roguelikedev\SDL2\include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Projects\C++\roguelikedev\SDL2\lib\x64;C:\Projects\C++\roguelikedev\LIBTCOD;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(ProjectDir)\SDL2\include;$(ProjectDir)\LIBTCOD\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(ProjectDir)\SDL2\lib\x64;$(ProjectDir)\LIBTCOD;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>true</LinkIncremental>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>C:\Projects\C++\roguelikedev\LIBTCOD\include;C:\Projects\C++\roguelikedev\SDL2\include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Projects\C++\roguelikedev\SDL2\lib\x64;C:\Projects\C++\roguelikedev\LIBTCOD;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(ProjectDir)\SDL2\include;$(ProjectDir)\LIBTCOD\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(ProjectDir)\SDL2\lib\x64;$(ProjectDir)\LIBTCOD;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -312,6 +312,9 @@
     <ClInclude Include="sdl2\include\SDL_version.h" />
     <ClInclude Include="sdl2\include\SDL_video.h" />
     <ClInclude Include="sdl2\include\SDL_vulkan.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".gitignore" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
