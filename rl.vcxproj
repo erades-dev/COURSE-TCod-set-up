@@ -68,7 +68,7 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>$(ProjectDir)\SDL2\include;$(ProjectDir)\LIBTCOD\include;$(IncludePath)</IncludePath>
+    <IncludePath>C:\Projects\C++\roguelike\include;$(ProjectDir)\SDL2\include;$(ProjectDir)\LIBTCOD\include;$(IncludePath)</IncludePath>
     <LibraryPath>$(ProjectDir)\SDL2\lib\x64;$(ProjectDir)\LIBTCOD;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -76,7 +76,7 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>$(ProjectDir)\SDL2\include;$(ProjectDir)\LIBTCOD\include;$(IncludePath)</IncludePath>
+    <IncludePath>C:\Projects\C++\roguelike\include;$(ProjectDir)\SDL2\include;$(ProjectDir)\LIBTCOD\include;$(IncludePath)</IncludePath>
     <LibraryPath>$(ProjectDir)\SDL2\lib\x64;$(ProjectDir)\LIBTCOD;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -97,8 +97,8 @@
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <SubSystem>Windows</SubSystem>
-      <AdditionalDependencies>SDL2.lib;SDL2main.lib;libtcod.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <SubSystem>Console</SubSystem>
+      <AdditionalDependencies>SDL2.lib;libtcod.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -121,16 +121,20 @@
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <SubSystem>Windows</SubSystem>
+      <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalDependencies>SDL2.lib;SDL2main.lib;libtcod.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>SDL2.lib;libtcod.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="source\Engine.cpp" />
     <ClCompile Include="source\main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="include\Engine.hpp" />
+    <ClInclude Include="include\Event.hpp" />
+    <ClInclude Include="include\Position.hpp" />
     <ClInclude Include="libtcod\include\libtcod.h" />
     <ClInclude Include="libtcod\include\libtcod.hpp" />
     <ClInclude Include="libtcod\include\libtcod\bresenham.h" />
@@ -312,9 +316,15 @@
     <ClInclude Include="sdl2\include\SDL_version.h" />
     <ClInclude Include="sdl2\include\SDL_video.h" />
     <ClInclude Include="sdl2\include\SDL_vulkan.h" />
+    <ClInclude Include="source\Engine.hpp" />
   </ItemGroup>
   <ItemGroup>
+    <None Include=".clang-format" />
     <None Include=".gitignore" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="terminal16x16_gs_ro.png" />
+    <Image Include="terminal8x8_gs_ro.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
