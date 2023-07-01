@@ -99,6 +99,8 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Console</SubSystem>
       <AdditionalDependencies>SDL2.lib;libtcod.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <EntryPointSymbol>
+      </EntryPointSymbol>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -125,16 +127,24 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <AdditionalDependencies>SDL2.lib;libtcod.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <EntryPointSymbol>
+      </EntryPointSymbol>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="source\Engine.cpp" />
     <ClCompile Include="source\main.cpp" />
+    <ClCompile Include="source\Map.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="include\Colors.hpp" />
     <ClInclude Include="include\Engine.hpp" />
+    <ClInclude Include="include\Entity.hpp" />
     <ClInclude Include="include\Event.hpp" />
+    <ClInclude Include="include\Map.hpp" />
     <ClInclude Include="include\Position.hpp" />
+    <ClInclude Include="include\Rectangle.hpp" />
+    <ClInclude Include="include\Tile.hpp" />
     <ClInclude Include="libtcod\include\libtcod.h" />
     <ClInclude Include="libtcod\include\libtcod.hpp" />
     <ClInclude Include="libtcod\include\libtcod\bresenham.h" />

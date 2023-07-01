@@ -1,5 +1,5 @@
-Language:                                       Cpp
 BasedOnStyle:                                   Microsoft
+Language:                                       Cpp
 SortIncludes: false
 IndentWidth:                                    4
 TabWidth:                                       4
@@ -10,11 +10,27 @@ AccessModifierOffset:                           -4
 AlignAfterOpenBracket:                          DontAlign
 AlignEscapedNewlines:                           Right
 AlignTrailingComments:                          true
-AllowShortCaseLabelsOnASingleLine:              true
+
+AllowShortCaseLabelsOnASingleLine:              false
+AllowShortFunctionsOnASingleLine:               false
 
 
-BreakBeforeBraces:                              Attach 
+BreakBeforeBraces:                              Custom 
+BraceWrapping:
+    AfterCaseLabel:                             false
+    AfterClass:                                 false
+    AfterControlStatement:                      false
+    AfterEnum:                                  false
+    AfterFunction:                              false
+    AfterNamespace:                             true
+    AfterStruct:                                false
+    BeforeCatch:                                false
+    BeforeElse:                                 false
+    SplitEmptyFunction:                         false
+    SplitEmptyRecord:                           false
+    SplitEmptyNamespace:                        false
 
 ColumnLimit:                                    0
 PointerAlignment:                               Right
 SpacesInAngles:                                 false
+NamespaceIndentation: All

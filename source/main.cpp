@@ -6,7 +6,7 @@ int main(int argc, char* argv[]) {
 
 	while (engine.IsRunning()) {
 		engine.Render();	  // render everything to the screen
-		engine.HandleInput(); // get input from user
+		engine.Input(); // get input from user
 		engine.Update();	  // do any game updates
 	}
 
